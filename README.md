@@ -3,7 +3,7 @@
 A simple faraday backed library for campfire.  It comes with an in-memory adapter
 to make working with campfire's API in dev/test a lot easier.
 
-Given a subdomain and a token Campfiyah gives you two things.
+Given a subdomain and a token, Campfiyah gives you two things.
 
 * List all rooms the token can access on a campfire subdomain
 * Send messages to specific rooms
@@ -13,6 +13,13 @@ Given a subdomain and a token Campfiyah gives you two things.
 Add this line to your application's Gemfile:
 
     gem 'campfiyah'
+
+
+Then require it in your code
+
+```ruby
+require 'campfiyah'
+```
 
 ## Usage
 
@@ -33,3 +40,7 @@ This won't hit the network at all but give you a consistent interface.
 ## Contributing
 
 1. Create new Pull Request
+
+## WTF is up with the name?
+
+![](https://f.cloud.github.com/assets/38/359740/3d68ad0a-a16d-11e2-9463-b0013b14fb01.gif)
