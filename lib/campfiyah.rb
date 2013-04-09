@@ -9,8 +9,8 @@ require "campfiyah/adapters"
 
 module Campfiyah
   def self.enable_mock!
-    @mock = true
-    adapter = Campfiyah::Adapters::HTTP
+    @mock    = true
+    @adapter = Campfiyah::Adapters::Memory
   end
 
   def self.adapter

@@ -1,6 +1,7 @@
 module Campfiyah
   class Account
     attr_accessor :subdomain, :token
+
     def initialize(subdomain, token)
       @adapter   = Campfiyah.adapter.new(subdomain, token)
 
