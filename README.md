@@ -26,7 +26,7 @@ require 'campfiyah'
 ```ruby
 account = Campfiyah::Account.new(default_subdomain, default_token)
 room = account.find_room("The Danger Room")
-room.message("woot").should be
+room.message("woot")
 ```
 
 You can also enable the in-memory adapter for development or tests.
