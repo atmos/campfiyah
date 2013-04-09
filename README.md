@@ -43,4 +43,4 @@ This won't hit the network at all but give you a consistent interface.
 
 ## WTF is up with the name?
 
-![](https://f.cloud.github.com/assets/38/359740/3d68ad0a-a16d-11e2-9463-b0013b14fb01.gif)
+![](https://f.cloud.github.com/assets/38/359743/8b6cc2c0-a16d-11e2-8d90-6b84f53bde79.gif)
