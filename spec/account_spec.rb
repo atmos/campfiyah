@@ -9,6 +9,9 @@ describe Campfiyah::Account do
       room = account.rooms.first
       room.id.should_not be_nil
       room.name.should_not be_nil
+
+      room = account.find_room("The Hubot Lab")
+      room.message("woot").should be
     end
   end
 end

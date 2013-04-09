@@ -15,11 +15,15 @@ module Campfiyah
       response = connection.get("/rooms.json")
       if response.status == 200
         response.body["rooms"].each do |room|
-          rooms << Room.from_hash(room)
+          rooms << Room.from_hash(room, connection)
         end
       end
 
       rooms.sort { |a,b| b.updated_at <=> a.updated_at }
+    end
+
+    def find_room(name)
+      rooms.find {|r| r.name == name}
     end
 
     private
