@@ -12,7 +12,7 @@ module Campfiyah
     def rooms
       @rooms ||= @adapter.rooms.map do |room|
         Room.from_hash(room, @adapter)
-      end
+      end.sort_by { |a,b| a.name <=> b.name }
     end
 
     def room_by_id(id)
