@@ -15,6 +15,10 @@ describe Campfiyah::Account do
 
       room = account.room_by_id(123456)
       room.name.should eql("The Danger Room")
+
+      room = account.room_by_id("123456")
+      room.name.should eql("The Danger Room")
+
       room.message("woot").should be
     end
   end
