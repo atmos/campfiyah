@@ -10,7 +10,11 @@ describe Campfiyah::Account do
       room.id.should_not be_nil
       room.name.should_not be_nil
 
-      room = account.find_room("The Danger Room")
+      room = account.room_by_name("The Danger Room")
+      room.message("woot").should be
+
+      room = account.room_by_id(123456)
+      room.name.should eql("The Danger Room")
       room.message("woot").should be
     end
   end

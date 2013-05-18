@@ -15,7 +15,11 @@ module Campfiyah
       end
     end
 
-    def find_room(name)
+    def room_by_id(id)
+      rooms.find {|r| r.id == id}
+    end
+
+    def room_by_name(name)
       rooms.find {|r| r.name == name}
     end
   end
