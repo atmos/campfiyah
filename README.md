@@ -25,7 +25,15 @@ require 'campfiyah'
 
 ```ruby
 account = Campfiyah::Account.new(default_subdomain, default_token)
-room = account.find_room("The Danger Room")
+room = account.room_by_name("The Danger Room")
+room.message("woot")
+```
+
+Or you can find rooms by id
+
+```ruby
+account = Campfiyah::Account.new(default_subdomain, default_token)
+room = account.room_by_id(123456)
 room.message("woot")
 ```
 
