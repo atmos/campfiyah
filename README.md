@@ -37,6 +37,15 @@ room = account.room_by_id(123456)
 room.message("woot")
 ```
 
+Or you can find information on users
+
+```ruby
+account = Campfiyah::Account.new(default_subdomain, default_token)
+user = account.user_by_id(123456)
+user.email
+user.name
+```
+
 You can also enable the in-memory adapter for development or tests.
 
 ```ruby
