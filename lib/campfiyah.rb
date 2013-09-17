@@ -5,6 +5,7 @@ require 'faraday_middleware'
 require "campfiyah/version"
 require "campfiyah/account"
 require "campfiyah/room"
+require "campfiyah/user"
 require "campfiyah/adapters"
 
 module Campfiyah

@@ -26,6 +26,15 @@ module Campfiyah
         rooms.sort { |a,b| b['updated_at'] <=> a['updated_at'] }
       end
 
+      def user_by_id(id)
+        response = connection.get("/users/#{id}.json")
+        if response.status == 200
+          response.body["user"]
+        else
+          { }
+        end
+      end
+
       def message(room_id, message)
         response = connection.post("/room/#{room_id}/speak.json") do |req|
           req.headers['Content-Type'] = 'application/json'

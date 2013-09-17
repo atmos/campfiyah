@@ -9,6 +9,11 @@ module Campfiyah
       @subdomain = subdomain
     end
 
+    def user_by_id(id)
+      user = @adapter.user_by_id(id)
+      User.from_hash(user, @adapter)
+    end
+
     def rooms
       @rooms ||= @adapter.rooms.map do |room|
         Room.from_hash(room, @adapter)
