@@ -5,6 +5,10 @@ module Campfiyah
         @rooms ||= Yajl.load(File.read("#{File.dirname(__FILE__)}/memory/rooms.json"))['rooms']
       end
 
+      def room_by_id(id)
+        @room ||= Yajl.load(File.read("#{File.dirname(__FILE__)}/memory/room.json"))['room']
+      end
+
       def user_by_id(id)
         hash = Yajl.load(File.read("#{File.dirname(__FILE__)}/memory/user.json"))['user']
         hash['id'] = id

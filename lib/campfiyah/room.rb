@@ -12,5 +12,14 @@ module Campfiyah
     def message(message)
       @adapter.message(id, message)
     end
+
+    def users
+      @users ||= users!
+    end
+
+    def users!
+      room = @adapter.room_by_id(id)
+      room['users'].map { |user| User.from_hash(user, @adapter) }
+    end
   end
 end

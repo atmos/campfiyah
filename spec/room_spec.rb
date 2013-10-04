@@ -5,5 +5,13 @@ describe Campfiyah::Room do
     it "messages a channel" do
       pending
     end
+
+    it "finds users for a room" do
+      account = Campfiyah::Account.new(default_subdomain, default_token)
+      account.rooms.should_not be_empty
+
+      room = account.room_by_name("The Danger Room")
+      room.users.size.should eql(2)
+    end
   end
 end

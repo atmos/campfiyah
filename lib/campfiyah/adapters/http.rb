@@ -26,6 +26,14 @@ module Campfiyah
         rooms.sort { |a,b| b['updated_at'] <=> a['updated_at'] }
       end
 
+      def room_by_id(id)
+        room = nil
+        response = connection.get("/room/#{id}.json")
+        if response.status == 200
+          room = response.body["room"]
+        end
+      end
+
       def user_by_id(id)
         response = connection.get("/users/#{id}.json")
         if response.status == 200
