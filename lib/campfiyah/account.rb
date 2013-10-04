@@ -24,7 +24,7 @@ module Campfiyah
       if @rooms
         rooms.find {|r| r.id.to_i == id.to_i}
       else
-        @adapter.room_by_id(id)
+        Room.from_hash(@adapter.room_by_id(id), @adapter)
       end
     end
 
