@@ -12,6 +12,9 @@ describe Campfiyah::Room do
 
       room = account.room_by_name("The Danger Room")
       room.users.size.should eql(2)
+
+      room = account.room_by_id(123456)
+      room.name.should eql("The Danger Room")
     end
   end
 end

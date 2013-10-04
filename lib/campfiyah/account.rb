@@ -21,7 +21,11 @@ module Campfiyah
     end
 
     def room_by_id(id)
-      rooms.find {|r| r.id.to_i == id.to_i}
+      if @rooms
+        rooms.find {|r| r.id.to_i == id.to_i}
+      else
+        @adapter.room_by_id(id)
+      end
     end
 
     def room_by_name(name)
